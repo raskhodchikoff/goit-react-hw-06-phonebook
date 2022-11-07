@@ -7,7 +7,7 @@ import { Button, ListItem } from './ContactList.styled';
 export const ContactList = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(getContacts);
-  const filter = useSelector(getFilter);
+  const filter = useSelector(getFilter).toLowerCase();
 
   const filteringContact = () =>
     contacts.filter(contact => contact.name.toLowerCase().includes(filter));

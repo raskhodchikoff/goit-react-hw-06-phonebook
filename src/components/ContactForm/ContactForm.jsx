@@ -52,10 +52,8 @@ export const ContactForm = () => {
           fontSize: '20px',
           width: '400px',
           clickToClose: true,
-        })
-      : dispatch(addContact(data));
-
-    actions.resetForm();
+        }) || actions.resetForm()
+      : dispatch(addContact(data)) && actions.resetForm();
   };
 
   return (
