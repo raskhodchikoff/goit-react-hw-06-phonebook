@@ -52,7 +52,7 @@ export const ContactForm = () => {
           fontSize: '20px',
           width: '400px',
           clickToClose: true,
-        }) || actions.resetForm()
+        })
       : dispatch(addContact(data)) && actions.resetForm();
   };
 
